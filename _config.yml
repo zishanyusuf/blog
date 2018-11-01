@@ -1,4 +1,2 @@
-theme: jekyll-theme-minimal
-search: true
-url: https://zishanyusuf.github.io/blogs
-repository : zishanyusuf/blogs/index.html
+name: Zishan Yusuf, Humble Cop
+markdown: kramdown
