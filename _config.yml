@@ -1,2 +1,3 @@
 name: Zishan Yusuf, Humble Cop
 markdown: kramdown
+permalink: /blogs//blog/:year/:month/:day/:title
