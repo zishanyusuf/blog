@@ -19,4 +19,4 @@ Well... Finally some placeholder to write my own Blog about data.table in R that
 Powered by [Jekyll](http://jekyllrb.com) and tutored by Hank Quinlan, Thank You!! It actually is a lot easier than I thought it was going to be.
 
 
-[1]: https://datascience-enthusiast.com/R/pandas_datatable.html "Wikipedia: Faster"
+[1]: https://datascience-enthusiast.com/R/pandas_datatable.html "Data Manipulation with Python Pandas and R Data.Table"
