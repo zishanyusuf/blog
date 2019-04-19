@@ -12,9 +12,11 @@ share: true
 # 1. DATA STRUCTURES & ASSIGNMENT
 ---
 
-## ROWs Wise Operations in data.table 
+Well... Finally some placeholder to write my own Blog about data.table in R that i will continue adding as i learn. In general based on my studies and experiments, it's known that data manipulation with data.table is [faster][1] than python pandas. Hence, i am going to put together my few explorations with data.table. 
 
-Well... Finally some placeholder to write my own Blog about data.table in R that i will continue adding as i learn. In general based on my studies and experiments, it's known that data manipulation with data.table is [faster][1] than python pandas. Hence, i am going to put together my few explorations with data.table. Consider the following example:
+## COLUMNs Wise Operations in data.table 
+
+Consider the following example:
 
 {% highlight r %}
 #Define a data.table for sake of experiment
@@ -23,18 +25,43 @@ DT <- data.table(V1=c(1L,2L), V2=LETTERS[1:3],V3=round(rnorm(4),4),V4=1:12)
 DT[, lapply(.SD, sum), by=V2]
 {% endhighlight %}
 
-This is a data manipulation that was carried over columns with grouping on a particular column (V2). Well, i wondered can i do the similar operations over ROW values instead of columns. Well, yes, you guessed it right - using "apply".
+This is a data manipulation that was carried over columns with grouping on a particular column (V2). Well that was straightforward.
+What about specifying some user defined function while doing COLUMNS wise operations in data.table. Well...let's do it.
+
+{% highlight text %}
+DT[, lapply(.SD, function(x) {
+     sum(x) + 2*x[1]
+ }), by=V2]
+{% endhighlight %}
+
+What did we do? We summed up each column and we again added twice value of first element in each column. Well go on, run the code and see the results for yourself.
+
+## ROWs Wise Operations in data.table 
+Well, i wondered can i do the similar operations over ROW values instead of columns. Well, yes, you guessed it right - use "apply".
 
 {% highlight text %}
 DT[, apply(.SD, 1, sum), by=V2]
 #OR,
-DT[, V5 := apply(.SD, 1, sum), by=V2] #Adds back the summation value to DT table
+DT[, V5 := apply(.SD, 1, sum), by=V2] # ":=" Adds back the summation value to DT table
 {% endhighlight %}
 
-Have you run the code yet? Come on, run it and see it's results. I am not going to show you the results here.
+Have you run started running the code yet? Come on, run it and see it's results. Because things are getting harder. Next, i will specify user defined function for ROWs operations
 
-Let's move on. What about specifying some user defined function while doing COLUMNS and ROWS wise operations in data.table. Well...let's do it.
+{% highlight text %}
+DT[, apply(.SD, 1, function(x){
+  x[1]+x[3]*5
+}), by=V2]
 
+#OR,
+DT[, V6 := apply(.SD, 1, function(x){ # ":=" Adds back the summation value to DT table
+  x[1]+x[3]*5
+}), by=V2]
+
+{% endhighlight %}
+
+Hmm...so you have not run the code yet!!! Or have you?
+
+Let's move on. 
 Powered by [Jekyll](http://jekyllrb.com) and tutored by Hank Quinlan, Thank You!! It actually is a lot easier than I thought it was going to be.
 
 
