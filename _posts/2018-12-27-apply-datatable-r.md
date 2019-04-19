@@ -40,6 +40,9 @@ What did we do? We summed up each column and we again added twice value of first
 Well, i wondered can i do the similar operations over ROW values instead of columns. Well, yes, you guessed it right - use "apply".
 
 {% highlight text %}
+#Re-define the same data.table
+DT <- data.table(V1=c(1L,2L), V2=LETTERS[1:3],V3=round(rnorm(4),4),V4=1:12)
+
 DT[, apply(.SD, 1, sum), by=V2]
 #OR,
 DT[, V5 := apply(.SD, 1, sum), by=V2] # ":=" Adds back the summation value to DT table
