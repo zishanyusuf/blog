@@ -19,9 +19,7 @@ Well... Finally some placeholder to write my own Blog about data.table in R that
 {% highlight r %}
 DT <- data.table(V1=c(1L,2L), V2=LETTERS[1:3],V3=round(rnorm(4),4),V4=1:12)
 DT[, lapply(.SD, sum), by=V2]
-
-OR, 
-
+#OR, 
 DT[, V5 := lapply(.SD, sum), by=V2] #Adds back the summation value to DT table
 {% endhighlight %}
 
@@ -29,9 +27,7 @@ This is a data manipulation that was carried over columns with grouping on a par
 
 {% highlight r %}
 DT[, apply(.SD, 1, sum), by=V2]
-
-OR,
-
+#OR,
 DT[, V5 := apply(.SD, 1, sum), by=V2]
 {% endhighlight %}
 
