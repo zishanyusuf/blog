@@ -25,7 +25,7 @@ DT[, V5 := lapply(.SD, sum), by=V2] #Adds back the summation value to DT table
 
 This is a data manipulation that was carried over columns with grouping on a particular column (V2). Well, i wondered can i do the similar operations over ROW values instead of columns. Well, yes, you guessed it right - using "apply".
 
-{% highlight r %}
+{% highlight text %}
 DT[, apply(.SD, 1, sum), by=V2]
 #OR,
 DT[, V5 := apply(.SD, 1, sum), by=V2]
@@ -33,7 +33,7 @@ DT[, V5 := apply(.SD, 1, sum), by=V2]
 
 Have you run the code yet? Come on run it and see it's results. I am not going to show you the results here.
 
-Let's move on. What about definding some user defined function within column and rows operations of data.table. Well...here you go.
+Let's move on. What about specifying some user defined function while doing COLUMNS and ROWS wise operations in data.table. Well...let's do it.
 
 Powered by [Jekyll](http://jekyllrb.com) and tutored by Hank Quinlan, Thank You!! It actually is a lot easier than I thought it was going to be.
 
