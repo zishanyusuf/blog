@@ -37,7 +37,7 @@ DT[, lapply(.SD, function(x) {
 What did we do? We summed up each column and we again added twice value of first element in each column. Well go on, run the code and see the results for yourself.
 
 ## 1.2 ROWs Wise Operations in data.table 
-Well, i wondered can i do the similar operations over ROW values instead of columns. Well, yes, you guessed it right - use "apply".
+I wondered can i do the similar operations over ROW values instead of columns. Well, yes, you guessed it right - use "apply".
 
 {% highlight text %}
 #Re-define the same data.table
@@ -62,7 +62,7 @@ DT[, V6 := apply(.SD, 1, function(x){ # ":=" Adds back the summation value to DT
 
 {% endhighlight %}
 
-Hmm...so you have not run the code yet! Or have you?
+Trying to figure out what function i wrote? Hmm...so you have not run the code yet! I know you will figure it out.
 
 Let's move on. 
 Powered by [Jekyll](http://jekyllrb.com) and tutored by Hank Quinlan, Thank You!! It actually is a lot easier than I thought it was going to be.
