@@ -62,7 +62,7 @@ DT[, V6 := apply(.SD, 1, function(x){ # ":=" Adds back the summation value to DT
 
 {% endhighlight %}
 
-Hmm...so you have not run the code yet!!! Or have you?
+Hmm...so you have not run the code yet! Or have you?
 
 Let's move on. 
 Powered by [Jekyll](http://jekyllrb.com) and tutored by Hank Quinlan, Thank You!! It actually is a lot easier than I thought it was going to be.
