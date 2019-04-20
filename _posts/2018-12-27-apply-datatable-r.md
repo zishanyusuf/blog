@@ -9,7 +9,7 @@ share: true
 * Table of Contents
 {:toc}
 
-# 1. DATA STRUCTURES & ASSIGNMENT
+# 1. USING FUNCTIONS IN DATA.TABLE OPERATIONS 
 ---
 
 Well... Finally some placeholder to write my own Blog about data.table in R that i will continue adding as i learn. In general based on my studies and experiments, it's known that data manipulation with data.table is [faster][1] than python pandas. Hence, i am going to put together my few explorations with data.table. 
