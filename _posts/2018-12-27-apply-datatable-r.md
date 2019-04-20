@@ -14,7 +14,7 @@ share: true
 
 Well... Finally some placeholder to write my own Blog about data.table in R that i will continue adding as i learn. In general based on my studies and experiments, it's known that data manipulation with data.table is [faster][1] than python pandas. Hence, i am going to put together my few explorations with data.table. 
 
-## COLUMNs Wise Operations in data.table 
+## 1.1 COLUMNs Wise Operations in data.table 
 
 Consider the following example:
 
@@ -36,7 +36,7 @@ DT[, lapply(.SD, function(x) {
 
 What did we do? We summed up each column and we again added twice value of first element in each column. Well go on, run the code and see the results for yourself.
 
-## ROWs Wise Operations in data.table 
+## 1.2 ROWs Wise Operations in data.table 
 Well, i wondered can i do the similar operations over ROW values instead of columns. Well, yes, you guessed it right - use "apply".
 
 {% highlight text %}
